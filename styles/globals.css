@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  body {
+    @apply bg-gradient-to-r from-bg_color-start to-bg_color-end;
+
+    background-position: cover;
+  }
+}
+
+.bg-animated {
+  background: linear-gradient(-90deg, #5400c9, #350675, #5400c9, #210050);
+  animation: bg-animated 10s linear infinite;
+  background-size: 400% 400%;
+}
+.text-animated {
+  background-image: linear-gradient(-90deg, #5400c9, #350675, #5400c9, #210050);
+  animation: bg-animated 10s linear infinite;
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.icons-after {
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  top: -25%;
+  left: -25%;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  animation: spin 1.5s linear infinite alternate;
+}
+
+@keyframes bg-animated {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
