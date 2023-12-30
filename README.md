@@ -1,2 +1,2 @@
-# auction.store
-( iranian auctioning shop )
+# Auction.store
+Frontend for Auction store.
